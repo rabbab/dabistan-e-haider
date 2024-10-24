@@ -1,0 +1,367 @@
+.home-banner {
+    background-image: url('../assets/images/home-banner-background.png');
+    background-size: cover; 
+    background-position: center; 
+    background-color: #05204B; 
+    width: 100%; 
+    height: 900px; 
+    position: relative;
+  }
+  .active{
+    background-color: #1d4ed8;
+}
+
+nav {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    background-color: transparent;
+    background: linear-gradient(180deg, #05204B 0%, rgba(5, 32, 75, 0) 100%);
+    color: white;
+    // position: sticky;
+    // top: 0;
+    width: 100%;
+    height: 10%;
+} 
+.home-logo img {
+    width: 35%;
+    height: auto;
+    margin-left: 5%;
+}
+
+nav ul {
+    display: flex;
+    gap: 25px;
+    margin-top: 0.75rem;
+    margin-right: 3%;
+}
+
+nav ul li {
+   list-style: none; 
+}
+
+nav ul li a {
+    display: block;
+    text-decoration: none;
+    color: white;
+    padding: 0.5rem 10px;
+    margin: 0 0.5rem;
+    border-radius: 0.5rem;
+    font-size: 20px;
+}
+
+nav ul li a:not(.active):hover {
+    background-color:#6F8694 ;
+}
+
+nav .menu {
+    display: none;
+    position: absolute;
+    top: 0.75rem;
+    right: 0.5rem;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 2.25rem;
+    height: 2rem;
+}
+
+nav .menu span {
+    height: 0.4rem;
+    width: 100%;
+    background-color: #fff;
+    border-radius: 0.2rem;
+    margin-bottom: 0.3rem;
+}
+
+nav .menu .cross-icon {
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
+    line-height: 1;
+}
+.donate-us {
+    position: relative;
+    width: 100%;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    // background-color: #6F8694;
+    font-size: 20px;
+    color: white;
+    padding: 0.7rem 0.5rem;
+    margin: 0.4rem 0.2rem;
+    cursor: pointer;
+    overflow: hidden;
+    text-align: center;
+    border: 1px solid #6F8694;
+}
+
+.donate-us span {
+    position: relative;
+    color: white; /* Ensure text remains white */
+    z-index: 1; /* Keep the text above the background */
+}
+
+.expandable-div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0; /* Start with 0 width */
+    background-color: #6F8694; /* Semi-transparent background effect */
+    transition: width 0.5s ease, opacity 0.5s ease; /* Smooth transition */
+    opacity: 0; /* Initially hidden */
+    z-index: 0; /* Behind the text */
+}
+
+.donate-us:hover .expandable-div {
+    width: 100%; /* Expand to full width on hover */
+    opacity: 1; /* Make the background visible on hover */
+}
+
+.donate-us:hover {
+    opacity: 1; /* Full opacity for the button on hover */
+}
+
+.banner-content {
+    display: flex;               /* Flexbox layout */
+    flex-direction: row;
+    justify-content: space-between;  /* Space between logo, ayat, and image */
+    align-items: center;             /* Vertically center items */
+    width: 100%;                /* Full width */
+    margin-top: 1rem;
+}
+
+.home-logo img {
+    width: 90%;
+    height: auto;
+    margin-left: 12%;
+    max-width: 784px;
+    animation: homeLogo 2s ease-in-out;
+}
+
+.banner-img img {
+    width: 538px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    animation: showCircle 1s ease; /* Apply the animation */
+}
+
+.banner-ayat {
+    color: white;
+    margin-right: 2rem;
+    animation: ayatVerses 2s ease-in-out;
+}
+
+.banner-ayat p {
+    font-family: Jameel Noori Nastaleeq;
+    font-size: 69px;
+    font-weight: 400;
+    text-align: center;
+    line-height: 96.9px;
+}
+.banner-ayat span {
+    font-family: "Poppins", sans-serif;
+    font-size: 20px;
+    line-height: 1.5;           /* Adjust line height for readability */
+    display: block;             /* Ensure the text is in its own block */
+    white-space: normal;        /* Allow text wrapping for better control */
+    max-width: 100%;            /* Make sure it doesn't overflow the container */
+    margin-top: 10px;           /* Add some spacing between the ayat and translation */
+    padding: 0 1rem;            /* Add padding for spacing */
+    text-align: center;
+}
+// .gradient-circle {
+//     position: absolute;
+//     width: 658px;
+//     height: 647px;
+//     top: 466px;
+//     left: 891px;
+//     opacity: 0px;
+//     border-radius: 50%;
+//     background: radial-gradient(circle, rgba(255, 255, 255, 0.1), rgba(0, 0, 0, 0.4));
+//     transform: translate(50%, 50%) scale(0); /* Start off-screen and scale to 0 */
+//     animation: showCircle 2s forwards; /* Apply the animation */
+//     z-index: 1;
+// }
+/* Animation for the gradient circle */
+@keyframes showCircle {
+    0% {
+        transform: translate(50%, 50%) scale(0); /* Off-screen */
+        opacity: 0;
+    }
+    100% {
+        transform: translate(-0%, -0%) scale(1); /* Center and full size */
+        opacity: 1;
+    }
+}
+@keyframes ayatVerses {
+    0% {
+        transform: translate(100%, 100%) scale(0); /* Start from bottom-right */
+        opacity: 0;  /* Fully transparent */
+    }
+    100% {
+        transform: translate(0, 0) scale(1);  /* Move to its normal position */
+        opacity: 1;  /* Fully visible */
+    }
+}
+@keyframes homeLogo {
+    0% {
+        transform: translate(-100%, 100%) scale(0); /* Start from left-bottom */
+        opacity: 0;  /* Fully transparent */
+    }
+    100% {
+        transform: translate(0, 0) scale(1);  /* Move to its normal position */
+        opacity: 1;  /* Fully visible */
+    }
+}
+/* Media query for screen width 1024px */
+@media only screen and (max-width: 1440px) {
+    .banner-content {
+        flex-direction: row;         /* Stack items vertically */
+        align-items: center;            /* Center items horizontally */
+    }
+
+    .home-logo img {
+        width: 100%;
+        margin-left: 0;
+        max-width: 600px;
+        animation: homeLogo 2s ease-in-out;
+    }
+    .banner-ayat p {
+        font-size: 50px;                /* Reduce the font size for smaller screens */
+        line-height: 1.3;               /* Adjust line height */
+    }
+
+    .banner-ayat span {
+        font-size: 18px;                /* Reduce the translation font size */
+        padding: 0 1rem;                /* Keep the padding for spacing */
+    }
+
+    .banner-img img {
+        display: none;
+    }
+}
+
+/* Media query for screen width 786px */
+@media only screen and (max-width: 786px) {
+    .home-banner {
+        width: 100%; 
+        height: 900px; 
+      }
+      .home-logo img {
+       width: 15%;
+       position: absolute; /* or 'fixed' if you want it to stay on scroll */
+            top: 0;
+            left: 0;
+    }
+        nav .menu {
+            display: flex;
+        }
+    
+        nav {
+            flex-direction: column;
+            align-items: flex-start;
+            height: 65%;
+        }
+    
+        nav ul {
+            display: none;
+            flex-direction: column;
+            width: 100%;
+            margin-bottom: 0.25rem;
+        }
+    
+        nav ul.open {
+            display: flex;
+        }
+    
+        nav ul li {
+            width: 100%;
+            text-align: center;
+        }
+    
+        nav ul li a {
+            margin: 0.2rem 0.5rem;
+        }
+        .donate-us{
+            margin: auto;
+            width: 30%;
+        }
+    .banner-content {
+        flex-direction: column;         /* Stack items vertically */
+        align-items: center;            /* Center items horizontally */
+    }
+
+    .home-logo img {
+        width: 30%;                    /* Adjust the logo size */
+        margin-left: 0;                 /* Remove margin to center the logo */
+        max-width: 500px;               /* Further reduce max-width */
+        animation: homeLogo 2s ease-in-out;
+    }
+
+    
+    .banner-ayat p {
+        font-size: 40px;                /* Reduce the font size further for smaller screens */
+        line-height: 1.2;               /* Adjust line height */
+    }
+
+    .banner-ayat span {
+        font-size: 16px;                /* Further reduce translation font size */
+        padding: 0 1rem;                /* Maintain padding */
+        text-align: center;             /* Keep text centered */
+    }
+
+    .banner-img img {
+       display: none;
+    }
+}
+
+// @media (max-width: 480px) {
+// .home-banner {
+//     width: 100%; 
+//     height: 900px; 
+//   }
+//   .home-logo img {
+//    width: 15%;
+//    position: absolute; /* or 'fixed' if you want it to stay on scroll */
+//         top: 0;
+//         left: 0;
+// }
+//     nav .menu {
+//         display: flex;
+//     }
+
+//     nav {
+//         flex-direction: column;
+//         align-items: flex-start;
+//         height: 65%;
+//     }
+
+//     nav ul {
+//         display: none;
+//         flex-direction: column;
+//         width: 100%;
+//         margin-bottom: 0.25rem;
+//     }
+
+//     nav ul.open {
+//         display: flex;
+//     }
+
+//     nav ul li {
+//         width: 100%;
+//         text-align: center;
+//     }
+
+//     nav ul li a {
+//         margin: 0.2rem 0.5rem;
+//     }
+//     .donate-us{
+//         margin: auto;
+//         width: 30%;
+//     }
+    
+// }
