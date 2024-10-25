@@ -39,7 +39,7 @@ const HomeBanner = () => {
               </li>
               </ul>
           </nav>
-          <div className='banner-content'>
+          <div className={`banner-content ${menuOpen ? 'overlay' : ''}`}>
                 <div className='banner-logo'>
                     <Link to="/" className="home-logo">
                         <img src={logo} alt="Home Logo" />

@@ -1,3 +1,7 @@
+$white: #F4FDFF;
+$darkblue: #05204A;
+$lightblue: #6F8695;
+
 .home-banner {
     background-image: url('../assets/images/home-banner-background.png');
     background-size: cover; 
@@ -32,7 +36,7 @@ nav {
 nav ul {
     display: flex;
     gap: 25px;
-    margin-top: 0.75rem;
+    // margin-top: 0.75rem;
     margin-right: 3%;
 }
 
@@ -74,10 +78,12 @@ nav .menu span {
 }
 
 nav .menu .cross-icon {
-    font-size: 2rem;
-    color: white;
-    cursor: pointer;
-    line-height: 1;
+    position: absolute; /* Positioning relative to the nearest positioned ancestor */
+    right: 1rem; /* Adjust as needed */
+    font-size: 2rem; /* Adjust size of the cross icon */
+    color: $darkblue; /* Change color as needed */
+    cursor: pointer; /* Change cursor to indicate it’s clickable */
+    z-index: 3; /* Ensure it appears above other elements */
 }
 .donate-us {
     position: relative;
@@ -217,22 +223,167 @@ nav .menu .cross-icon {
         opacity: 1;  /* Fully visible */
     }
 }
-/* Media query for screen width 1024px */
-@media only screen and (max-width: 1440px) {
+
+
+/* Media query for screen width 576px to 768px */
+@media only screen and (min-width: 576px) and (max-width: 768px) {
+
+    .home-logo img {
+        width: 20%;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    /* Menu styling */
+    nav .menu {
+        display: flex;
+    }
+
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+        height: 65%;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    nav ul.open {
+        display: flex;
+    }
+
+    /* Improved ul li styling */
+    nav ul li {
+        width: 100%;
+        text-align: center;
+        border-bottom: 1px solid #ddd; /* Add bottom border for separation */
+        font-size: 1.2rem; /* Adjust font size for better readability */
+    }
+
+    nav ul li:last-child {
+        border-bottom: none; /* Remove border on last item */
+    }
+
+    nav ul li a {
+        margin: 0.2rem 0.5rem;
+        color: $white; /* Set color for links */
+        text-decoration: none;
+        transition: color 0.3s ease;
+    }
+
+    nav ul li a:not(.active):hover {
+        background-color:$lightblue ;
+    }
+
+    nav ul li a:hover {
+        color: lightblue; /* Darker color on hover */
+    }
+
+    .donate-us {
+        margin: auto;
+        width: 30%;
+    }
+
+    /* Overlay adjustments */
+    .home-banner.menu-open .banner-content.overlay {
+        position: relative;
+    }
+    
+    // .home-banner.menu-open .banner-content::before {
+    //     content: '';
+    //     position: absolute;
+    //     top: 0;
+    //     left: 0;
+    //     right: 0;
+    //     bottom: 0;
+    //     background-color: rgba(255, 0, 0, 0.5); /* Semi-transparent overlay */
+    //     z-index: 1;
+    // }
+
+    /* Ensure nav menu appears above the overlay */
+    nav ul.open {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 2;
+        background: $darkblue;
+        width: 100%;
+        padding: 1rem;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Banner content styling */
     .banner-content {
-        flex-direction: row;         /* Stack items vertically */
-        align-items: center;            /* Center items horizontally */
-        height: 700px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        margin-top: -4rem;
+        padding-left: 10px;
+        width: 100%;
     }
 
     .home-logo img {
-        width: 80%;
+        width: 25%;                    /* Adjust the logo size */
+        margin-left: 0;                 /* Remove margin to center the logo */
+        max-width: 300px;               /* Further reduce max-width */
+        animation: homeLogo 2s ease-in-out;
+    }
+
+    .banner-ayat p {
+        font-size: 40px;                /* Reduce the font size further for smaller screens */
+        line-height: 1.2;               /* Adjust line height */
+    }
+
+    .banner-ayat span {
+        font-size: 16px;                /* Further reduce translation font size */
+        padding: 0 1rem;                /* Maintain padding */
+        text-align: c
+    }
+    nav .menu .cross-icon {
+        color: $white; /* Change color as needed */
+        font-weight: 800
+    }
+}
+
+/* Medium devices (tablets, 768px - 1024px) */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+    .home-logo img {
+        width: 80%; /* Adjust logo size */
+    }
+    .banner-ayat p {
+        font-size: 32px;
+    }
+    .banner-ayat span {
+        font-size: 18px;
+    }
+}
+
+/* Large devices (laptops/desktops, 1024px - 1440px) */
+@media only screen and (min-width: 1024px) and (max-width: 1440px) {
+    .home-logo img {
+        width: 60%;
+        max-width: 400px;
+    }
+    .banner-ayat p {
+        font-size: 40px;
+    }
+}
+
+/* Media query for screen width 1024px */
+@media only screen and (min-width: 1440px) and (max-width: 2560px) {
+
+    .home-logo img {
+        width: 100%;
         margin-left: 8%;
         max-width: 600px;
         animation: homeLogo 2s ease-in-out;
     }
     .banner-ayat {
-        margin-right: 17rem;
+        margin-right: 23rem;
     }
     .banner-ayat p {
         font-size: 50px;                /* Reduce the font size for smaller screens */
@@ -245,7 +396,7 @@ nav .menu .cross-icon {
     }
 
     .banner-img img {
-        width: 538px;
+        width: 600px;
     position: absolute;
     bottom: 0;
     right: 0;
@@ -253,79 +404,9 @@ nav .menu .cross-icon {
     }
 }
 
-/* Media query for screen width 786px */
-@media only screen and (max-width: 786px) {
-    .home-banner {
-        width: 100%; 
-        height: 900px; 
-      }
-      .home-logo img {
-       width: 15%;
-       position: absolute; /* or 'fixed' if you want it to stay on scroll */
-            top: 0;
-            left: 0;
-    }
-        nav .menu {
-            display: flex;
-        }
-    
-        nav {
-            flex-direction: column;
-            align-items: flex-start;
-            height: 65%;
-        }
-    
-        nav ul {
-            display: none;
-            flex-direction: column;
-            width: 100%;
-            margin-bottom: 0.25rem;
-        }
-    
-        nav ul.open {
-            display: flex;
-        }
-    
-        nav ul li {
-            width: 100%;
-            text-align: center;
-        }
-    
-        nav ul li a {
-            margin: 0.2rem 0.5rem;
-        }
-        .donate-us{
-            margin: auto;
-            width: 30%;
-        }
-    .banner-content {
-        flex-direction: column;         /* Stack items vertically */
-        align-items: center;            /* Center items horizontally */
-    }
 
-    .home-logo img {
-        width: 30%;                    /* Adjust the logo size */
-        margin-left: 0;                 /* Remove margin to center the logo */
-        max-width: 500px;               /* Further reduce max-width */
-        animation: homeLogo 2s ease-in-out;
-    }
 
-    
-    .banner-ayat p {
-        font-size: 40px;                /* Reduce the font size further for smaller screens */
-        line-height: 1.2;               /* Adjust line height */
-    }
 
-    .banner-ayat span {
-        font-size: 16px;                /* Further reduce translation font size */
-        padding: 0 1rem;                /* Maintain padding */
-        text-align: center;             /* Keep text centered */
-    }
-
-    .banner-img img {
-       display: none;
-    }
-}
 
 // @media (max-width: 480px) {
 // .home-banner {
