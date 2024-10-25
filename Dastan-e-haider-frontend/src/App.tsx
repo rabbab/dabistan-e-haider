@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Routes } from "react-router-dom";
 import { Suspense } from "react";
 import Loader from "./components/Loader";
 import HomeBanner from "./components/HomeBanner";
