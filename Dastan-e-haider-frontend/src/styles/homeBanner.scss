@@ -222,13 +222,17 @@ nav .menu .cross-icon {
     .banner-content {
         flex-direction: row;         /* Stack items vertically */
         align-items: center;            /* Center items horizontally */
+        height: 700px;
     }
 
     .home-logo img {
-        width: 100%;
-        margin-left: 0;
+        width: 80%;
+        margin-left: 8%;
         max-width: 600px;
         animation: homeLogo 2s ease-in-out;
+    }
+    .banner-ayat {
+        margin-right: 17rem;
     }
     .banner-ayat p {
         font-size: 50px;                /* Reduce the font size for smaller screens */
@@ -241,7 +245,11 @@ nav .menu .cross-icon {
     }
 
     .banner-img img {
-        display: none;
+        width: 538px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    animation: showCircle 1s ease; /* Apply the animation */
     }
 }
 
