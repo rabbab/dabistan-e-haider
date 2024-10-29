@@ -80,7 +80,7 @@ $lightblue: #6F8695;
     width: 24px;
     height: 2px;
     background-color: #fff;
-    margin: 3px 0;
+    margin: 5px 0;
 }
 
 .home-banner .header nav ul {
@@ -133,6 +133,7 @@ nav ul li a:not(.active):hover {
     border-radius: .5rem;
     margin-right: 2rem;
     margin-left: 1rem;
+    margin-top: 3px;
 }
     .donate-us span {
     position: relative;
@@ -201,13 +202,32 @@ background-color: #1d4ed8;
 }
 
 .banner-img img {
-    width: 750px;
+    width: 950px;
     position: absolute;
     bottom: 0;
     right: 0;
     animation: showCircle 1s ease-in-out; /* Apply the animation */
 }
-
+@media (max-width: 1440px) {
+    .home-banner .header  nav ul {
+        gap: 5px;
+    }
+    .banner-ayat p {
+        font-family: "Jameel Noori Nastaleeq";
+        font-size: 90px;
+        font-weight: 500;
+        margin-bottom: 1rem;
+    }
+    
+    .banner-ayat span {
+        font-size: 23px;
+        margin-bottom: 2px;
+        line-height: 1.2;
+    }
+    .banner-img img {
+        width: 650px;
+    }
+}
 @media (max-width: 1024px) {
     .home-banner .header  nav ul {
         gap: 7px;
@@ -266,9 +286,9 @@ background-color: #1d4ed8;
     }
     .home-banner .header  nav .home-logo img {
         position: absolute;
-        top: 12px;
-        left: 9rem;
-        width: 299px;
+        top: -17px;
+        left: 13rem;
+        width: 308px;
     }
     .home-banner .header nav .donate-us {
         position: absolute;
@@ -307,6 +327,7 @@ background-color: #1d4ed8;
         border-radius: 5px;
         margin-bottom: 0.4rem;
     }
+    
 
     .home-banner .header nav {
         flex-direction: column;
@@ -412,8 +433,8 @@ background-color: #1d4ed8;
         font-size: 18px;
         margin-bottom: 2px;
         margin-right: 29.2rem;
-        line-height: 1.2;
-        display: block;
+        // line-height: 1.2;
+        // display: block;
         text-align: center;
     }
     
