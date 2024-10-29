@@ -3,6 +3,8 @@ $darkblue: #05204A;
 $lightblue: #6F8695;
 
 .home-banner {
+    display: flex;
+    flex-direction: row;
     background-image: url('../assets/images/home-banner-background.png');
     background-size: cover; 
     background-position: center; 
@@ -225,11 +227,46 @@ nav .menu .cross-icon {
 }
 
 
+@media (max-width: 1024px) {
+    nav ul {
+        gap: 12px;
+    }
+    nav ul li a {
+        
+        font-size: 18px;
+    }
+    .home-logo img {
+        width: 90%;
+        margin-left: 8%;
+        max-width: 600px;
+        animation: homeLogo 2s ease-in-out;
+        margin-top: 5rem;
+    }
+    .banner-ayat {
+        display: none;
+    }
+
+    .banner-img img {
+        width: 500px;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        animation: showCircle 1s ease; /* Apply the animation */
+    }
+}
+
 /* Media query for screen width 576px to 768px */
-@media only screen and (min-width: 576px) and (max-width: 768px) {
+@media (max-width: 768px) {
+
+        .home-logo img {
+           width: 15%;
+           position: absolute; /* or 'fixed' if you want it to stay on scroll */
+        top: 0;
+        left: 0;
+        }
 
     .home-logo img {
-        width: 20%;
+        width: 40%;
         position: absolute;
         top: 0;
         left: 0;
@@ -348,84 +385,6 @@ nav .menu .cross-icon {
         font-weight: 800
     }
 }
-
-/* Medium devices (tablets, 768px - 1024px) */
-@media only screen and (min-width: 768px) and (max-width: 1024px) {
-    .home-logo img {
-        width: 80%; /* Adjust logo size */
-    }
-    .banner-ayat p {
-        font-size: 32px;
-    }
-    .banner-ayat span {
-        font-size: 18px;
-    }
-}
-
-/* Large devices (laptops/desktops, 1024px - 1440px) */
-@media only screen and (min-width: 1024px) and (max-width: 1440px) {
-    .home-logo img {
-        width: 100%;
-        margin-left: 8%;
-        max-width: 600px;
-        animation: homeLogo 2s ease-in-out;
-    }
-    .banner-ayat {
-        margin-right: 23rem;
-    }
-    .banner-ayat p {
-        font-size: 70px;                /* Reduce the font size for smaller screens */
-        line-height: 1.3;               /* Adjust line height */
-    }
-
-    .banner-ayat span {
-        font-size: 18px;                /* Reduce the translation font size */
-        padding: 0 1rem;                /* Keep the padding for spacing */
-    }
-
-    .banner-img img {
-        width: 600px;
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    animation: showCircle 1s ease; /* Apply the animation */
-    }
-}
-
-/* Media query for screen width 1024px */
-// @media only screen and (min-width: 1440px) and (max-width: 2560px) {
-
-//     .home-logo img {
-//         width: 100%;
-//         margin-left: 8%;
-//         max-width: 600px;
-//         animation: homeLogo 2s ease-in-out;
-//     }
-//     .banner-ayat {
-//         margin-right: 23rem;
-//     }
-//     .banner-ayat p {
-//         font-size: 70px;                /* Reduce the font size for smaller screens */
-//         line-height: 1.3;               /* Adjust line height */
-//     }
-
-//     .banner-ayat span {
-//         font-size: 18px;                /* Reduce the translation font size */
-//         padding: 0 1rem;                /* Keep the padding for spacing */
-//     }
-
-//     .banner-img img {
-//         width: 600px;
-//     position: absolute;
-//     bottom: 0;
-//     right: 0;
-//     animation: showCircle 1s ease; /* Apply the animation */
-//     }
-// }
-
-
-
-
 
 // @media (max-width: 480px) {
 // .home-banner {

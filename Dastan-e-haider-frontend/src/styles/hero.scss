@@ -1,0 +1,427 @@
+$white: #F4FDFF;
+$darkblue: #05204A;
+$lightblue: #6F8695;
+  
+  .home-banner {
+    background-image: url('../assets/images/home-banner-background.png');
+    background-size: cover;
+    background-position: center;
+    background-color: #05204B;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+  }
+  
+  .home-banner .header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.home-banner .header nav {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    background-color: transparent;
+    background: linear-gradient(180deg, #05204B 0%, rgba(5, 32, 75, 0) 100%);
+    color: white;
+    width: 100%;
+    padding-top: 1.5rem;
+}
+.home-banner .header nav .menu {
+    display: none;
+    position: absolute;
+    top: 0.75rem;
+    right: 0.5rem;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 2.25rem;
+    height: 2rem;
+}
+
+.home-banner .header nav .menu span {
+    height: 0.4rem;
+    width: 100%;
+    background-color: #fff;
+    border-radius: 0.2rem;
+    margin-bottom: 0.3rem;
+}
+
+.home-banner .header nav .menu .cross-icon {
+    position: absolute; /* Positioning relative to the nearest positioned ancestor */
+    right: 1rem; /* Adjust as needed */
+    font-size: 2rem; /* Adjust size of the cross icon */
+    color: $darkblue; 
+    cursor: pointer; /* Change cursor to indicate it’s clickable */
+    z-index: 3; /* Ensure it appears above other elements */
+}
+
+.home-logo img {
+    width: 120%;
+    height: auto;
+    margin-left: 12%;
+    max-width: 900px;
+    animation: homeLogo 2s ease-in-out;
+}
+
+.home-banner .header nav .menu {
+    display: none; /* Set to 'block' or adjust as needed for responsiveness */
+    cursor: pointer;
+}
+
+.home-banner .header nav .menu .cross-icon {
+    font-size: 1.5rem;
+    color: #fff;
+}
+
+.home-banner .header nav .menu span {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background-color: #fff;
+    margin: 3px 0;
+}
+
+.home-banner .header nav ul {
+    display: flex;
+    gap: 1.5rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    flex-grow: 1;
+    justify-content: end;
+    padding: 0.5rem 0; /* Optional padding for better spacing */
+}
+
+.home-banner .header nav ul li {
+    position: relative; /* Position relative to help with hover state */
+}
+
+.home-banner .header nav ul li a {
+    display: block;
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.8rem;
+    font-weight: 400;
+    transition: background-color 0.3s, color 0.3s; /* Smooth background and color transition */
+    border-radius: 0.5rem;
+    padding: 0.5rem 10px;
+    margin: 0; /* Remove margin to prevent additional spacing issues */
+}
+
+nav ul li a:not(.active):hover {
+    background-color: #6F8694; /* Change the background on hover */
+    color: #fff; /* Optional: change text color on hover */
+}
+  
+
+.home-banner .header nav .donate-us {
+    position: relative;
+    width: 10%;
+    height: 39px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 26px;
+    color: white;
+    padding: 1.7rem 0.5rem;
+    margin: 0.4rem 0.2rem;
+    cursor: pointer;
+    overflow: hidden;
+    text-align: center;
+    border: 1px solid #6F8694;
+    margin-left: 3rem;
+    margin-right: 3rem;
+    border-radius: 0.5rem;
+}
+    .donate-us span {
+    position: relative;
+    color: white; /* Ensure text remains white */
+    z-index: 1; /* Keep the text above the background */
+    }
+
+.expandable-div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0; /* Start with 0 width */
+    background-color: #6F8694; /* Semi-transparent background effect */
+    transition: width 0.5s ease, opacity 0.5s ease; /* Smooth transition */
+    opacity: 0; /* Initially hidden */
+    z-index: 0; /* Behind the text */
+}
+
+.donate-us:hover .expandable-div {
+    width: 100%; /* Expand to full width on hover */
+    opacity: 1; /* Make the background visible on hover */
+}
+
+.donate-us:hover {
+    opacity: 1; /* Full opacity for the button on hover */
+}
+  
+.active {
+background-color: #1d4ed8;
+}
+  
+.home-logo img {
+    width: 500px;
+    height: auto;
+    margin-left: 12%;
+    max-width: 784px;
+    animation: homeLogo 2s ease-in-out;
+}
+
+.banner-content {
+    display: flex;
+    justify-content: space-between;   /* Space between .banner-ayat and .banner-img */
+    align-items: center;
+    width: 100%;
+}
+
+.banner-ayat {
+    color: white;
+    width: 900px;
+    position: absolute;
+    top: 35%;
+    left: 10%;
+    animation: showCircle 1s ease; /* Apply the animation */
+}
+
+.banner-ayat p {
+    font-family: "Jameel Noori Nastaleeq";
+    font-size: 147px;
+    font-weight: 400;
+    text-align: left;                 /* Align text left */
+    margin: 0;                        /* Remove default margins */
+    line-height: 1.5;
+}
+
+.banner-ayat span {
+    font-family: "Poppins", sans-serif;
+    font-size: 38px;
+    line-height: 1.7;
+}
+
+.banner-img img {
+    width: 900px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    animation: showCircle 1s ease; /* Apply the animation */
+}
+
+@media (max-width: 1024px) {
+    .home-banner .header  nav ul {
+        gap: 7px;
+    }
+    .home-banner .header  nav ul li a {
+        font-size: 16px;
+    }
+    .home-logo img {
+        width: 230px;
+        margin-left: 8%;
+        // max-width: 600px;
+        animation: homeLogo 2s ease-in-out;
+    }
+    .banner-ayat {
+        display: block;
+    }
+    .banner-ayat p {
+        font-family: "Jameel Noori Nastaleeq";
+        font-size: 90px;
+        font-weight: 300;
+        margin-bottom: 1rem;
+    }
+    
+    .banner-ayat span {
+        font-size: 23px;
+        margin-bottom: 2px;
+        line-height: 1.2;
+    }
+
+    .banner-img img {
+        width: 550px;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        animation: showCircle 1s ease; /* Apply the animation */
+    }
+    .home-banner .header nav .donate-us {
+        position: relative;
+        width: 9%;
+        font-size: 16px;
+        color: white;
+        padding: 1.2rem 0.2rem;
+    }
+    
+}
+
+
+/* Media query for screen width 576px to 768px */
+@media (max-width: 768px) {
+
+    .home-banner{
+        width: 100%;  /* Set width to 100% */
+        height: 100vh; /* Set height to 100% of the viewport */
+        position: relative; /* Ensure proper positioning */
+        overflow: hidden; /* Hide any overflow if content exceeds */
+    }
+    .home-banner .header  nav .home-logo img {
+        position: absolute;
+        top: 12px;
+        left: 9rem;
+        width: 299px;
+    }
+    .home-banner .header nav .donate-us {
+        position: absolute;
+        top: 32px;
+        right: 0;
+        width: 113px;
+        height: 31px;
+        background-color: $white;
+        padding: 1rem 0.2rem;
+    }
+    .home-banner .header nav .donate-us span {
+        color: $darkblue; 
+        font-weight: bold;
+        }
+    /* Hover effect */
+    .donate-us:hover .expandable-div {
+        opacity: 0; /* Show background */
+    }
+
+    
+    .home-banner .header nav .menu {
+        display: block;
+        position: absolute;
+        top: 32px;
+        left: 1.5rem;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 3.25rem;
+        height: 2rem;
+    }
+    
+    .home-banner .header nav .menu span {
+        height: 0.4rem;
+        width: 100%;
+        background-color: #fff;
+        border-radius: 5px;
+        margin-bottom: 0.4rem;
+    }
+
+    .home-banner .header nav {
+        flex-direction: column;
+        align-items: flex-start;
+        height: 65%;
+    }
+
+    .home-banner .header nav ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .home-banner .header nav ul.open {
+        display: flex;
+    }
+
+    /* Improved ul li styling */
+    .home-banner .header nav ul li {
+        width: 100%;
+        text-align: center;
+        border-bottom: 1px solid #ddd; /* Add bottom border for separation */
+        font-size: 1.2rem; /* Adjust font size for better readability */
+    }
+
+    .home-banner .header  nav ul li:last-child {
+        border-bottom: none; /* Remove border on last item */
+    }
+
+    .home-banner .header  nav ul li a {
+        margin: 0.2rem 0.5rem;
+        color: $white; /* Set color for links */
+        text-decoration: none;
+        transition: color 0.3s ease;
+    }
+
+    .home-banner .header  nav ul li a:not(.active):hover {
+        background-color:$lightblue ;
+    }
+
+    .home-banner .header  nav ul li a:hover {
+        color: lightblue; /* Darker color on hover */
+    }
+
+    /* Overlay adjustments */
+    .home-banner.menu-open .banner-content.overlay {
+        position: relative;
+    }
+    
+    .home-banner.menu-open .banner-content::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 50%; /* Only half the screen width */
+        height: 100%; /* Full height */
+        background-color: rgba(255, 0, 0, 0.5); /* Semi-transparent overlay */
+        z-index: 1;
+    }
+
+    /* Ensure nav menu appears above the overlay */
+    nav ul.open {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 2;
+        background: $darkblue;
+        width: 100%;
+        padding: 1rem;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Banner content styling */
+    .banner-content {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        margin-top: -4rem;
+        padding-left: 10px;
+        width: 50%;
+        z-index: 3;
+    }
+
+    .banner-img img {
+        width: 500px;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        animation: showCircle 1s ease; /* Apply the animation */
+    }
+    .banner-ayat {
+        margin-left: -2.8rem;
+        margin-top: 3rem;
+    }
+    .banner-ayat p {
+        font-size: 70px;
+        font-weight: 300;
+        margin-bottom: 1rem;
+    }
+    
+    .banner-ayat span {
+        font-size: 18px;
+        margin-bottom: 2px;
+        line-height: 1.2;
+    }
+    nav .menu .cross-icon {
+        color: $white; /* Change color as needed */
+        font-weight: 800;
+        bottom: 1rem;
+    }
+}
