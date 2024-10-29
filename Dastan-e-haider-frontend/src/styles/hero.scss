@@ -413,12 +413,15 @@ background-color: #1d4ed8;
         font-weight: 300;
         margin-bottom: 1rem;
     }
-    
     .banner-ayat span {
         font-size: 18px;
         margin-bottom: 2px;
+        margin-right: 29.2rem;
         line-height: 1.2;
+        display: block;
+        text-align: center;
     }
+    
     nav .menu .cross-icon {
         color: $white; /* Change color as needed */
         font-weight: 800;
