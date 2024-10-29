@@ -23,12 +23,12 @@ const Hero = () => {
                         </>
                         )}
                     </div>
-                        <div className='banner-logo'>
+                        <div data-aos="fade-down" className='banner-logo'>
                                 <Link to="/" className="home-logo">
                                     <img src={logo} alt="Home Logo" />
                                 </Link>
                         </div>
-                        <ul className={menuOpen ? "open" : ""}>
+                        <ul data-aos="fade-down" className={menuOpen ? "open" : ""}>
                             <li><NavLink to="/home">Home</NavLink></li>
                             <li><NavLink to="/about">About</NavLink></li>
                             <li><NavLink to="/teacher">Teacher</NavLink></li>
@@ -37,14 +37,14 @@ const Hero = () => {
                             <li><NavLink to="/books">Books</NavLink></li>
                             <li><NavLink to="/contact">Contact Us</NavLink></li>
                         </ul>
-                        <div className="donate-us">
+                        <div data-aos="fade-down" className="donate-us">
                                 <div className="expandable-div"></div>
                                 <span> Donate us</span>
                         </div>
                 </nav>
             </div>
           <div className={`banner-content ${menuOpen ? 'overlay' : ''}`}>
-                <div className='banner-ayat'>
+                <div data-aos="fade-up-right" className='banner-ayat'>
                     <p>اَلَا بِذِکْرِ اللہِ تَطْمَئِنُّ الْقُلُوۡبُ</p>
                     <span>
                       Unquestionably, by the remembrance of Allah hearts <br />
