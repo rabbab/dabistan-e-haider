@@ -80,7 +80,7 @@ $lightblue: #6F8695;
     width: 24px;
     height: 2px;
     background-color: #fff;
-    margin: 3px 0;
+    margin: 5px 0;
 }
 
 .home-banner .header nav ul {
@@ -102,7 +102,7 @@ $lightblue: #6F8695;
     display: block;
     text-decoration: none;
     color: #fff;
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     font-weight: 400;
     transition: background-color 0.3s, color 0.3s; /* Smooth background and color transition */
     border-radius: 0.5rem;
@@ -118,22 +118,22 @@ nav ul li a:not(.active):hover {
 
 .home-banner .header nav .donate-us {
     position: relative;
-    width: 10%;
-    height: 39px;
+    width: 171px;
+    height: 50px;
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 26px;
-    color: white;
-    padding: 1.7rem 0.5rem;
-    margin: 0.4rem 0.2rem;
+    color: #fff;
+    padding: 1.7rem .5rem;
     cursor: pointer;
     overflow: hidden;
     text-align: center;
     border: 1px solid #6F8694;
-    margin-left: 3rem;
-    margin-right: 3rem;
-    border-radius: 0.5rem;
+    border-radius: .5rem;
+    margin-right: 2rem;
+    margin-left: 1rem;
+    margin-top: 3px;
 }
     .donate-us span {
     position: relative;
@@ -165,14 +165,6 @@ nav ul li a:not(.active):hover {
 .active {
 background-color: #1d4ed8;
 }
-  
-.home-logo img {
-    width: 500px;
-    height: auto;
-    margin-left: 12%;
-    max-width: 784px;
-    animation: homeLogo 2s ease-in-out;
-}
 
 .banner-content {
     display: flex;
@@ -187,7 +179,6 @@ background-color: #1d4ed8;
     position: absolute;
     top: 35%;
     left: 10%;
-    animation: showCircle 1s ease; /* Apply the animation */
 }
 
 .banner-ayat p {
@@ -200,19 +191,43 @@ background-color: #1d4ed8;
 }
 
 .banner-ayat span {
-    font-family: "Poppins", sans-serif;
-    font-size: 38px;
-    line-height: 1.7;
+    font-family: Poppins, sans-serif;
+    font-size: 35px;
+    line-height: 1.2;
+    margin-bottom: 3rem;
+    font-weight: 200;
+    margin-top: 1rem;
+    display: block;
+    letter-spacing: 1px;
 }
 
 .banner-img img {
-    width: 900px;
+    width: 950px;
     position: absolute;
     bottom: 0;
     right: 0;
-    animation: showCircle 1s ease; /* Apply the animation */
+    animation: showCircle 1s ease-in-out; /* Apply the animation */
 }
-
+@media (max-width: 1440px) {
+    .home-banner .header  nav ul {
+        gap: 5px;
+    }
+    .banner-ayat p {
+        font-family: "Jameel Noori Nastaleeq";
+        font-size: 90px;
+        font-weight: 500;
+        margin-bottom: 1rem;
+    }
+    
+    .banner-ayat span {
+        font-size: 23px;
+        margin-bottom: 2px;
+        line-height: 1.2;
+    }
+    .banner-img img {
+        width: 650px;
+    }
+}
 @media (max-width: 1024px) {
     .home-banner .header  nav ul {
         gap: 7px;
@@ -271,9 +286,9 @@ background-color: #1d4ed8;
     }
     .home-banner .header  nav .home-logo img {
         position: absolute;
-        top: 12px;
-        left: 9rem;
-        width: 299px;
+        top: -17px;
+        left: 13rem;
+        width: 308px;
     }
     .home-banner .header nav .donate-us {
         position: absolute;
@@ -312,6 +327,7 @@ background-color: #1d4ed8;
         border-radius: 5px;
         margin-bottom: 0.4rem;
     }
+    
 
     .home-banner .header nav {
         flex-direction: column;
@@ -417,8 +433,8 @@ background-color: #1d4ed8;
         font-size: 18px;
         margin-bottom: 2px;
         margin-right: 29.2rem;
-        line-height: 1.2;
-        display: block;
+        // line-height: 1.2;
+        // display: block;
         text-align: center;
     }
     
@@ -426,5 +442,15 @@ background-color: #1d4ed8;
         color: $white; /* Change color as needed */
         font-weight: 800;
         bottom: 1rem;
+    }
+}
+@keyframes showCircle {
+    0% {
+        transform: translate(50%, 50%) scale(0); /* Off-screen */
+        opacity: 0;
+    }
+    100% {
+        transform: translate(-0%, -0%) scale(1); /* Center and full size */
+        opacity: 1;
     }
 }
