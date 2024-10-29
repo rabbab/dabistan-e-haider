@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { Link, NavLink } from 'react-router-dom'
-import "../styles/Hero.scss"
+import "../styles/hero.scss"
 import logo from '../assets/images/sm-logo.png';
 import bannerImage from '../assets/images/haider-home-banner.png';
 
