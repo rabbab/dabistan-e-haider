@@ -47,7 +47,7 @@ const Hero = () => {
                 <div data-aos="fade-up-right" className='banner-ayat'>
                     <p>اَلَا بِذِکْرِ اللہِ تَطْمَئِنُّ الْقُلُوۡبُ</p>
                     <span>
-                      Unquestionably, by the remembrance of Allah hearts <br />
+                      Unquestionably, by the remembrance of Allah hearts 
                       are assured.
                   </span>
                 </div>
