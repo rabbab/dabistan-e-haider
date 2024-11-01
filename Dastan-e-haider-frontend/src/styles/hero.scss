@@ -208,249 +208,254 @@ background-color: #1d4ed8;
     right: 0;
     animation: showCircle 1s ease-in-out; /* Apply the animation */
 }
-// @media (max-width: 1440px) {
-//     .home-banner .header  nav ul {
-//         gap: 5px;
-//     }
-//     .home-banner .header nav ul li a {
-//         font-size: 1.2rem;
-//     }
-//     .banner-ayat p {
-//         font-family: "Jameel Noori Nastaleeq";
-//         font-size: 90px;
-//         font-weight: 500;
-//         margin-bottom: 1rem;
-//     }
-    
-//     .banner-ayat span {
-//         font-size: 23px;
-//         margin-bottom: 2px;
-//         line-height: 1.2;
-//     max-width: 592px;
+@media screen and (width<= 1100px) {
+    .home-banner .header nav ul {
+        gap: 10px;
+    }
+    .home-banner .header nav ul li a {
+        font-size: 16px;
+    }
+    .home-logo img {
+        max-width: 600px;
+        animation: homeLogo 2s ease-in-out;
+        width: 250px;
+        max-width: 280px;
+    }
+    .banner-ayat {
+       margin: auto;
+    }
+    .banner-ayat p {
+        font-size: 90px;
+    }
 
-//     }
-//     .banner-img img {
-//         width: 650px;
-//     }
-// }
-// @media (max-width: 1024px) {
-//     .home-banner .header  nav ul {
-//         gap: 7px;
-//     }
-//     .home-banner .header  nav ul li a {
-//         font-size: 16px;
-//     }
-//     .home-logo img {
-//         width: 230px;
-//         margin-left: 8%;
-//         // max-width: 600px;
-//         animation: homeLogo 2s ease-in-out;
-//     }
-//     .banner-ayat {
-//         display: block;
-//     }
-//     .banner-ayat p {
-//         font-family: "Jameel Noori Nastaleeq";
-//         font-size: 90px;
-//         font-weight: 300;
-//         margin-bottom: 1rem;
-//     }
-    
-//     .banner-ayat span {
-//         font-size: 23px;
-//         margin-bottom: 2px;
-//         line-height: 1.2;
-//         max-width: 592px;
-//     }
+    .banner-ayat span {
+        font-size: 24px;
+        text-align: center;
+        max-width: 543px;
+    }
+    .banner-img img {
+        width: 600px;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        animation: showCircle 1s ease; /* Apply the animation */
+    }
+    .home-banner .header nav .donate-us {
+        height: 20px;
+        border-radius: 5px;
+        max-width: 110px;
+        background-color: #F4FDFF;
+        padding: 14px;
+    }
+    .home-banner .header nav .donate-us span {
+        color: $darkblue;
+        font-weight: bold;
+        font-size: 15px;
+    }
+     
+}
+@media screen and (width<= 1200px) {
+    .home-banner .header nav ul {
+        gap: 10px;
+    }
+    .home-banner .header nav ul li a {
+        font-size: 16px;
+    }
+    .home-logo img {
+        max-width: 600px;
+        animation: homeLogo 2s ease-in-out;
+        width: 250px;
+        max-width: 280px;
+    }
+    .banner-ayat {
+       margin: auto;
+    }
+    .banner-ayat p {
+        font-size: 90px;
+    }
 
-//     .banner-img img {
-//         width: 550px;
-//         position: absolute;
-//         bottom: 0;
-//         right: 0;
-//         animation: showCircle 1s ease; /* Apply the animation */
-//     }
-//     .home-banner .header nav .donate-us {
-//         position: relative;
-//         width: 9%;
-//         font-size: 16px;
-//         color: white;
-//         padding: 1.2rem 0.2rem;
-//     }
-    
-// }
-/* Media query for screen width 576px to 768px */
-// @media (max-width: 768px) {
+    .banner-ayat span {
+        font-size: 24px;
+        text-align: center;
+        max-width: 543px;
+    }
+    .banner-img img {
+        width: 600px;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        animation: showCircle 1s ease; /* Apply the animation */
+    }
+    .home-banner .header nav .donate-us {
+        height: 20px;
+        border-radius: 5px;
+        max-width: 110px;
+        background-color: #F4FDFF;
+        padding: 14px;
+    }
+    .home-banner .header nav .donate-us span {
+        color: $darkblue;
+        font-weight: bold;
+        font-size: 15px;
+    }
+     
+}
+@media screen and (width<= 786px) {
+    .home-banner {
+        width: 100%;
+        height: 100vh;
+        position: relative;
+        overflow: hidden;
+    }
 
-//     .home-banner{
-//         width: 100%;  /* Set width to 100% */
-//         height: 100vh; /* Set height to 100% of the viewport */
-//         position: relative; /* Ensure proper positioning */
-//         overflow: hidden; /* Hide any overflow if content exceeds */
-//     }
-//     .home-banner .header  nav .home-logo img {
-//         position: absolute;
-//         top: -17px;
-//         left: 13rem;
-//         width: 308px;
-//     }
-//     .home-banner .header nav .donate-us {
-//         position: absolute;
-//         top: 32px;
-//         right: 0;
-//         width: 113px;
-//         height: 31px;
-//         background-color: $white;
-//         padding: 1rem 0.2rem;
-//     }
-//     .home-banner .header nav .donate-us span {
-//         color: $darkblue; 
-//         font-weight: bold;
-//         }
-//     /* Hover effect */
-//     .donate-us:hover .expandable-div {
-//         opacity: 0; /* Show background */
-//     }
+    .home-banner .header nav .home-logo img {
+        position: absolute;
+        top: -21px;
+        left: 13rem;
+        width: 316px;
+        max-width: 320px;
+    }
 
-    
-//     .home-banner .header nav .menu {
-//         display: block;
-//         position: absolute;
-//         top: 32px;
-//         left: 1.5rem;
-//         flex-direction: row;
-//         justify-content: space-between;
-//         width: 3.25rem;
-//         height: 2rem;
-//     }
-    
-//     .home-banner .header nav .menu span {
-//         height: 0.4rem;
-//         width: 100%;
-//         background-color: #fff;
-//         border-radius: 5px;
-//         margin-bottom: 0.4rem;
-//     }
-    
+    .home-banner .header nav .donate-us {
+        height: 24px;
+        border-radius: 5px;
+        position: absolute;
+        top: 27px;
+        right: -15px;
+        max-width: 110px;
+        background-color: #F4FDFF;
+        padding: 14px;
+    }
 
-//     .home-banner .header nav {
-//         flex-direction: column;
-//         align-items: flex-start;
-//         height: 65%;
-//     }
+    .home-banner .header nav .donate-us span {
+        color: $darkblue;
+        font-weight: bold;
+        font-size: 15px;
+    }
 
-//     .home-banner .header nav ul {
-//         display: none;
-//         flex-direction: column;
-//         width: 100%;
-//     }
+    .donate-us:hover .expandable-div {
+        opacity: 0;
+    }
 
-//     .home-banner .header nav ul.open {
-//         display: flex;
-//     }
+    .home-banner .header nav .menu {
+        display: block;
+        position: absolute;
+        top: 27px;
+        left: 2rem;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 2rem;
+        height: 2rem;
+    }
 
-//     /* Improved ul li styling */
-//     .home-banner .header nav ul li {
-//         width: 100%;
-//         text-align: center;
-//         border-bottom: 1px solid #ddd; /* Add bottom border for separation */
-//         font-size: 1.2rem; /* Adjust font size for better readability */
-//     }
+    .home-banner .header nav .menu span {
+        height: 0.2rem;
+        width: 100%;
+        background-color: #fff;
+        border-radius: 5px;
+        margin-bottom: 0.4rem;
+    }
 
-//     .home-banner .header  nav ul li:last-child {
-//         border-bottom: none; /* Remove border on last item */
-//     }
+    .home-banner .header nav {
+        flex-direction: column;
+        align-items: flex-start;
+        height: 65%;
+    }
 
-//     .home-banner .header  nav ul li a {
-//         margin: 0.2rem 0.5rem;
-//         color: $white; /* Set color for links */
-//         text-decoration: none;
-//         transition: color 0.3s ease;
-//     }
+    .home-banner .header nav ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+    }
 
-//     .home-banner .header  nav ul li a:not(.active):hover {
-//         background-color:$lightblue ;
-//     }
+    .home-banner .header nav ul.open {
+        display: flex;
+    }
 
-//     .home-banner .header  nav ul li a:hover {
-//         color: lightblue; /* Darker color on hover */
-//     }
+    .home-banner .header nav ul li {
+        width: 100%;
+        text-align: center;
+        border-bottom: 1px solid #ddd;
+        font-size: 1.2rem;
+    }
 
-//     /* Overlay adjustments */
-//     .home-banner.menu-open .banner-content.overlay {
-//         position: relative;
-//     }
-    
-//     .home-banner.menu-open .banner-content::before {
-//         content: '';
-//         position: absolute;
-//         top: 0;
-//         left: 0;
-//         right: 0;
-//         bottom: 0;
-//         width: 50%; /* Only half the screen width */
-//         height: 100%; /* Full height */
-//         background-color: rgba(255, 0, 0, 0.5); /* Semi-transparent overlay */
-//         z-index: 1;
-//     }
+    .home-banner .header nav ul li:last-child {
+        border-bottom: none;
+    }
 
-//     /* Ensure nav menu appears above the overlay */
-//     nav ul.open {
-//         position: absolute;
-//         top: 0;
-//         left: 0;
-//         z-index: 2;
-//         background: $darkblue;
-//         width: 100%;
-//         padding: 1rem;
-//         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-//     }
+    .home-banner .header nav ul li a {
+        margin: 0.2rem 0.5rem;
+        color: $white;
+        text-decoration: none;
+        transition: color 0.3s ease;
+    }
 
-//     /* Banner content styling */
-//     .banner-content {
-//         display: flex;
-//         flex-direction: column;
-//         align-items: flex-start;
-//         margin-top: -4rem;
-//         padding-left: 10px;
-//         width: 50%;
-//         z-index: 3;
-//     }
+    .home-banner .header nav ul li a:not(.active):hover {
+        background-color: $lightblue;
+    }
 
-//     .banner-img img {
-//         width: 500px;
-//         position: absolute;
-//         bottom: 0;
-//         right: 0;
-//         animation: showCircle 1s ease; /* Apply the animation */
-//     }
-//     .banner-ayat {
-//         top: 20%;
-//         left: 15%;
-//     }
-//     .banner-ayat p {
-//         font-size: 70px;
-//         font-weight: 300;
-//         margin-bottom: 1rem;
-//     }
-//     .banner-ayat span {
-//         font-size: 18px;
-//         margin-bottom: 2px;
-//         margin-right: 29.2rem;
-//         // line-height: 1.2;
-//         // display: block;
-//         text-align: center;
-//         max-width: 500px;
-//     }
-    
-//     nav .menu .cross-icon {
-//         color: $white; /* Change color as needed */
-//         font-weight: 800;
-//         bottom: 1rem;
-//     }
-// }
-@media (min-width: 768px) {
+    .home-banner .header nav ul li a:hover {
+        color: lightblue;
+    }
 
+    .home-banner.menu-open .banner-content.overlay {
+        position: relative;
+    }
+
+    .home-banner.menu-open .banner-content::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(255, 0, 0, 0.5);
+        z-index: 1;
+    }
+
+    nav ul.open {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 2;
+        background: $darkblue;
+        width: 100%;
+        padding: 1rem;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .banner-content {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .banner-img img {
+        max-width: 507px;
+    }
+
+    .banner-ayat {
+        margin-top: -9rem;
+        margin-left: 2rem;
+    }
+
+    .banner-ayat p {
+        font-size: 90px;
+    }
+
+    .banner-ayat span {
+        font-size: 24px;
+        text-align: center;
+        max-width: 543px;
+    }
+
+    nav .menu .cross-icon {
+        color: $white;
+        font-weight: 800;
+    }
+}
+@media screen and (width<= 600px) {
     .home-banner {
         width: 100%;
         height: 100vh;
@@ -461,7 +466,7 @@ background-color: #1d4ed8;
     .home-banner .header nav .home-logo img {
         position: absolute;
         top: -23px;
-        left: 4.4rem;
+        left: 6.7rem;
         width: 200px;
         max-width: 210px;
     }
@@ -473,7 +478,7 @@ background-color: #1d4ed8;
         opacity: 1;
         position: absolute;
         top: 15px;
-        left: 17.4rem;
+        right: -15px;
         max-width: 75px;
         background-color: #F4FDFF;
         padding: 1px;
@@ -561,7 +566,7 @@ background-color: #1d4ed8;
         left: 0;
         right: 0;
         bottom: 0;
-        width: 50%;
+        width: 100%;
         height: 100%;
         background-color: rgba(255, 0, 0, 0.5);
         z-index: 1;
@@ -580,48 +585,32 @@ background-color: #1d4ed8;
 
     .banner-content {
         display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        margin-top: -4rem;
-        padding-left: 10px;
-        width: 50%;
-        z-index: 3;
+        flex-direction: row;
     }
 
     .banner-img img {
-        width: 500px;
-        position: absolute;
-        bottom: 0;
-        right: 0;
-        animation: showCircle 1s ease;
+        width: 400px;
     }
 
     .banner-ayat {
-        top: 20%;
-        left: 15%;
+        margin: -66px auto;
     }
 
     .banner-ayat p {
-        font-size: 70px;
-        font-weight: 300;
-        margin-bottom: 1rem;
+        font-size: 55px;
     }
 
     .banner-ayat span {
         font-size: 18px;
-        margin-bottom: 2px;
-        margin-right: 29.2rem;
         text-align: center;
-        max-width: 500px;
+        max-width: 353px;
     }
 
     nav .menu .cross-icon {
         color: $white;
         font-weight: 800;
-        bottom: 1rem;
     }
 }
-
 @keyframes showCircle {
     0% {
         transform: translate(50%, 50%) scale(0); /* Off-screen */
