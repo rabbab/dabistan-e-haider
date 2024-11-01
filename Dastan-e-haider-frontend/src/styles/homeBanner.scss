@@ -330,16 +330,16 @@ nav .menu .cross-icon {
         position: relative;
     }
     
-    // .home-banner.menu-open .banner-content::before {
-    //     content: '';
-    //     position: absolute;
-    //     top: 0;
-    //     left: 0;
-    //     right: 0;
-    //     bottom: 0;
-    //     background-color: rgba(255, 0, 0, 0.5); /* Semi-transparent overlay */
-    //     z-index: 1;
-    // }
+    .home-banner.menu-open .banner-content::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(255, 0, 0, 0.5); /* Semi-transparent overlay */
+        z-index: 1;
+    }
 
     /* Ensure nav menu appears above the overlay */
     nav ul.open {
