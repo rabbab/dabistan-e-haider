@@ -4,7 +4,8 @@ import Loader from "./components/Loader";
 import AOS from 'aos'
 import 'aos/dist/aos.css'
 // import HomeBanner from "./components/HomeBanner";
-import Hero from "./components/Hero";
+// import Hero from "./components/Hero";
+import Navbar from "./components/Navbar/Navbar";
 
 const App = () => {
   useEffect(()=>{
@@ -14,7 +15,8 @@ const App = () => {
   },[]);
   return (
     <Router>
-      <Hero />
+      <Navbar />
+      {/* <Hero /> */}
       {/* <HomeBanner /> */}
       <Suspense fallback={<Loader />}>
         <Routes>
