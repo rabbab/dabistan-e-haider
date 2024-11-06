@@ -128,7 +128,7 @@ $lightblue: #6F8695;
         gap: 10px;
     }
     .nav-wrapper ul li a {
-        padding: 0 0.4rem;
+        padding: 0.4rem;
         margin: 1rem auto;
         font-size: 14px;
     }
@@ -165,7 +165,9 @@ width: 14rem;
 .nav-wrapper ul {
     display: none;
     flex-direction: column;
+    align-items: center; /* Center items */
     width: 100%;
+    text-align: center; /* Center-aligns the menu items */
 }
 
 .nav-wrapper ul.open {
@@ -183,26 +185,9 @@ width: 14rem;
 .nav-wrapper ul li:last-child {
     border-bottom: none; /* Remove border on last item */
 }
-
-.nav-wrapper ul li a {
-    margin: 0.2rem 0.5rem;
-    color: $white; /* Set color for links */
-    text-decoration: none;
-    transition: color 0.3s ease;
-    padding: 0.5rem;
-}
-
-.nav-wrapper ul li a:not(.active):hover {
-    background-color:$lightblue ;
-}
-
-.nav-wrapper ul li a:hover {
-    color: lightblue; /* Darker color on hover */
-}
-
-.donate-us {
-    margin: auto;
-    width: 30%;
+a.donate-us {
+    margin: 0 auto; 
+    width: 30%; 
 }
 
 /* Overlay adjustments */
@@ -269,13 +254,13 @@ width: 13rem;
     text-align: center;
 }
 
-.nav-wrapper ul li a {
-    margin: 0.2rem 0.5rem;
-    padding: 0.5rem;
-}
-.donate-us{
-    margin: auto;
-    width: 40%;
+// .nav-wrapper ul li a {
+//     margin: 0.2rem 0.5rem;
+//     padding: 0.5rem;
+// }
+a.donate-us {
+    margin: 0 auto; 
+    width: 30%; 
 }
 
 

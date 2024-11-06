@@ -32,10 +32,10 @@ const Navbar = () => {
                     <li><NavLink to="/books">Books</NavLink></li>
                     <li><NavLink to="/contact">Contact Us</NavLink></li>
                     <li>
-                    <div className="donate-us">
+                    <NavLink to="/donate-us" className="donate-us">
                         <div className="expandable-div"></div>
-                        <span> Donate us</span>
-                    </div>
+                        <span>Donate Us</span>
+                    </NavLink>
                 </li>
                 </ul>
             </div>
