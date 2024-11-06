@@ -1,0 +1,282 @@
+$white: #F4FDFF;
+$darkblue: #05204A;
+$lightblue: #6F8695;
+
+.nav-wrapper {
+    background-color: #05204A;
+    /* background-color: (0,0,0,0.1); */
+    padding: 0.5rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 30;
+    backdrop-filter: blur(50px);
+} 
+.nav-content{
+    /* max-width: 1300px; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1rem;
+    margin: 0 auto;
+}
+.logo {
+    width: 20rem;
+    height: auto;
+}
+
+.nav-wrapper ul {
+    display: flex;
+    gap: 25px;
+    // margin-top: 0.75rem;
+    margin-right: 3%;
+}
+
+.nav-wrapper ul li {
+   list-style: none; 
+}
+
+.nav-wrapper ul li a {
+    display: block;
+    text-decoration: none;
+    color: white;
+    padding: 0.5rem 12px;
+    border-radius: 0.5rem;
+    font-size: 22px;
+}
+
+.nav-wrapper ul li a:not(.active):hover {
+    background-color:#6F8694 ;
+}
+
+.nav-wrapper .menu {
+    display: none;
+    position: absolute;
+    top: 0.75rem;
+    right: 0.5rem;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 2.25rem;
+    height: 2rem;
+}
+
+.nav-wrapper .menu span {
+    height: 0.4rem;
+    width: 100%;
+    background-color: #fff;
+    border-radius: 0.2rem;
+    margin-bottom: 0.3rem;
+}
+
+.nav-wrapper .menu .cross-icon {
+    font-size: 2rem; /* Adjust size of the cross icon */
+    color: $white; /* Change color as needed */
+    cursor: pointer; /* Change cursor to indicate it’s clickable */
+    z-index: 3; /* Ensure it appears above other elements */
+    margin-top: -0.7rem;
+    font-weight: 800
+}
+.donate-us {
+    position: relative;
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    // background-color: #6F8694;
+    font-size: 20px;
+    color: white;
+    padding: 0.5rem;
+    cursor: pointer;
+    overflow: hidden;
+    text-align: center;
+    border: 1px solid #6F8694;
+    border-radius: 12px;
+}
+
+.donate-us span {
+    position: relative;
+    color: white; /* Ensure text remains white */
+    z-index: 1; /* Keep the text above the background */
+}
+
+.expandable-div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0; /* Start with 0 width */
+    background-color: #6F8694; /* Semi-transparent background effect */
+    transition: width 0.5s ease, opacity 0.5s ease; /* Smooth transition */
+    opacity: 0; /* Initially hidden */
+    z-index: 0; /* Behind the text */
+}
+
+.donate-us:hover .expandable-div {
+    width: 100%; /* Expand to full width on hover */
+    opacity: 1; /* Make the background visible on hover */
+}
+
+.donate-us:hover {
+    opacity: 1; /* Full opacity for the button on hover */
+}
+/* Media query for screen width 576px to 768px */
+@media (max-width: 1024px) {
+    .logo{
+        width: 16rem;
+    }
+    .nav-wrapper ul {
+        gap: 10px;
+    }
+    .nav-wrapper ul li a {
+        padding: 0 0.4rem;
+        margin: 1rem auto;
+        font-size: 14px;
+    }
+    .donate-us {
+        font-size: 14px;
+        margin: 0.4rem auto;
+    }
+}
+/* Media query for screen width 576px to 768px */
+@media (max-width: 768px) {
+
+    .nav-content{
+        padding: 0 1rem;
+    }
+.logo {
+width: 14rem;
+}
+.nav-wrapper .menu {
+    display: flex;
+    margin: 0.7rem;
+}
+
+/* Menu styling */
+.nav-wrapper .menu {
+    display: flex;
+}
+
+.nav-wrapper {
+    flex-direction: column;
+    align-items: flex-start;
+    height: 65%;
+}
+
+.nav-wrapper ul {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+}
+
+.nav-wrapper ul.open {
+    display: flex;
+}
+
+/* Improved ul li styling */
+.nav-wrapper ul li {
+    width: 100%;
+    text-align: center;
+    border-bottom: 1px solid #ddd; /* Add bottom border for separation */
+    font-size: 1.2rem; /* Adjust font size for better readability */
+}
+
+.nav-wrapper ul li:last-child {
+    border-bottom: none; /* Remove border on last item */
+}
+
+.nav-wrapper ul li a {
+    margin: 0.2rem 0.5rem;
+    color: $white; /* Set color for links */
+    text-decoration: none;
+    transition: color 0.3s ease;
+    padding: 0.5rem;
+}
+
+.nav-wrapper ul li a:not(.active):hover {
+    background-color:$lightblue ;
+}
+
+.nav-wrapper ul li a:hover {
+    color: lightblue; /* Darker color on hover */
+}
+
+.donate-us {
+    margin: auto;
+    width: 30%;
+}
+
+/* Overlay adjustments */
+.home-banner.menu-open .banner-content.overlay {
+    position: relative;
+}
+
+.home-banner.menu-open .banner-content::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(255, 0, 0, 0.5); /* Semi-transparent overlay */
+    z-index: 1;
+}
+
+/* Ensure .nav-wrapper menu appears above the overlay */
+.nav-wrapper ul.open {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    background: $darkblue;
+    width: 100%;
+    padding: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+}
+
+@media (max-width: 480px) {
+    .nav-content{
+        padding: 0;
+    }
+.logo {
+width: 13rem;
+}
+.nav-wrapper .menu {
+    display: flex;
+    margin: 0.7rem;
+}
+
+.nav-wrapper {
+    flex-direction: column;
+    align-items: flex-start;
+    height: 65%;
+}
+
+.nav-wrapper ul {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 0.25rem;
+}
+
+.nav-wrapper ul.open {
+    display: flex;
+}
+
+.nav-wrapper ul li {
+    width: 100%;
+    text-align: center;
+}
+
+.nav-wrapper ul li a {
+    margin: 0.2rem 0.5rem;
+    padding: 0.5rem;
+}
+.donate-us{
+    margin: auto;
+    width: 40%;
+}
+
+
+}
