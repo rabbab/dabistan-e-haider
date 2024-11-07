@@ -22,8 +22,8 @@ const Navbar = () => {
                     </>
                     )}
                 </div>
-                <img className="logo" src={logo}/>
-                <ul className={menuOpen ? "open" : ""}>
+                <img data-aos="fade-down" className="logo" src={logo}/>
+                <ul data-aos="fade-down" className={menuOpen ? "open" : ""}>
                     <li><NavLink to="/home">Home</NavLink></li>
                     <li><NavLink to="/about">About</NavLink></li>
                     <li><NavLink to="/teacher">Teacher</NavLink></li>

@@ -6,6 +6,7 @@ import 'aos/dist/aos.css'
 // import HomeBanner from "./components/HomeBanner";
 // import Hero from "./components/Hero";
 import Navbar from "./components/Navbar/Navbar";
+import HeroSection from "./components/HeroSection/HeroSection";
 
 const App = () => {
   useEffect(()=>{
@@ -16,6 +17,7 @@ const App = () => {
   return (
     <Router>
       <Navbar />
+      <HeroSection />
       {/* <Hero /> */}
       {/* <HomeBanner /> */}
       <Suspense fallback={<Loader />}>
