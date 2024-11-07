@@ -1,0 +1,154 @@
+.hero-section{
+    background-image: url('../../assets/images/home-banner-background.png');
+    background-size: cover; 
+    background-position: center; 
+    background-color: #05204B; 
+    width: 100%; 
+    padding: 0 1rem;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: calc(100vh - 6rem);
+}
+.banner-content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1rem;
+    margin: 0 auto;
+    width: 100%;
+}
+.banner-ayat{
+    color: white;
+    max-width: 1000px;
+    align-items: center;
+    flex-grow: 1; 
+    padding: 2rem;
+}
+.banner-ayat p {
+    font-family: "Noto Nastaliq Urdu", serif;
+    font-size: 100px;
+    font-weight: 400;
+    line-height: 2;
+}
+.banner-ayat span {
+    font-size: 30px;
+    line-height: 1.5;
+    margin-bottom: 3rem;
+    font-weight: 200;
+    margin-top: 1rem;
+    display: block;
+    letter-spacing: 1px;
+    max-width: 840px;
+}
+.banner-img{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    max-width: 970px;
+    animation: showCircle 1s ease-in;
+}
+@media (max-width: 1440px) {
+    .banner-img{
+        max-width: 600px;
+    }
+    
+    .banner-ayat p {
+        font-family: "Noto Nastaliq Urdu", serif;
+        font-size: 95px;
+        font-weight: 400;
+        line-height: 2;
+        // max-width: 1000px;
+    }
+    .banner-ayat span {
+        max-width: 737px;
+    }
+}
+@media (max-width: 1024px) {
+    .banner-img{
+        max-width: 500px;
+    }
+    
+    .banner-ayat p {
+        font-size: 70px;
+        font-weight: 400;
+        line-height: 2;
+    }
+    .banner-ayat span {
+        font-size: 20px;
+        max-width: 600px;
+    }
+}
+@media (max-width: 768px) {
+    .banner-ayat{
+        padding: 2rem 0;
+    }
+    .banner-ayat p {
+        font-size: 48px;
+        line-height: 2;
+        max-width: 800px;
+        text-align: start;
+    }
+    .banner-ayat span {
+        font-size: 16px;
+        margin-bottom: 20rem;
+        line-height: 1.5;
+        text-align: start;
+        max-width: 434px;
+    }
+    .banner-img{
+        max-width: 500px;
+    }  
+}
+
+@media (max-width: 480px) {
+    .banner-ayat{
+        padding: 0rem;
+    }
+    .banner-ayat p {
+        font-size: 40px;
+        font-weight: 400;
+        line-height: 2;
+        // max-width: 500px;
+        text-align: center;
+    }
+    .banner-ayat span {
+        font-size: 14px;
+        margin-bottom: 20rem;
+        text-align: center;
+        max-width: 500px;
+        padding: 0 1rem;
+    }
+    .banner-img{
+        max-width: 400px;
+    }  
+}
+@media (max-width: 420px) {
+    
+    .banner-ayat p {
+        font-size: 29px;
+        font-weight: 400;
+        line-height: 2;
+    }
+    .banner-ayat span {
+        font-size: 12px;
+        text-align: center;
+        max-width: 500px;
+        padding: 0 1rem;
+    }
+    .banner-img{
+        max-width: 300px;
+    }  
+}
+
+@keyframes showCircle {
+    0% {
+        transform: translate(50%, 50%) scale(0); /* Off-screen */
+        opacity: 0;
+    }
+    100% {
+        transform: translate(-0%, -0%) scale(1); /* Center and full size */
+        opacity: 1;
+    }
+}
