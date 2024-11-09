@@ -141,38 +141,35 @@ $lightblue: #6F8695;
 /* Media query for screen width 576px to 768px */
 @media (max-width: 768px) {
 
-    .nav-content{
-        padding: 0 1rem;
-    }
+.nav-content{
+    padding: 0 1rem;
+}
 .logo {
-width: 14rem;
+    width: 14rem;
 }
-.nav-wrapper .menu {
-    display: flex;
-    margin: 0.7rem;
-}
-
-/* Menu styling */
-.nav-wrapper .menu {
-    display: flex;
-}
-
 .nav-wrapper {
     flex-direction: column;
     align-items: flex-start;
     height: 65%;
 }
-
+.nav-wrapper .menu {
+    display: flex;
+    margin: 0.7rem;
+}
 .nav-wrapper ul {
     display: none;
     flex-direction: column;
     align-items: center; /* Center items */
     width: 100%;
     text-align: center; /* Center-aligns the menu items */
+    list-style: none; /* Remove bullet points */
+    padding: 0; /* Remove default padding */
+    margin: 0; /* Remove default margin */
 }
 
 .nav-wrapper ul.open {
     display: flex;
+    opacity: 1;
 }
 
 /* Improved ul li styling */
@@ -181,6 +178,7 @@ width: 14rem;
     text-align: center;
     border-bottom: 1px solid #ddd; /* Add bottom border for separation */
     font-size: 1.2rem; /* Adjust font size for better readability */
+    margin: 0; /* Ensure no extra margin */
 }
 
 .nav-wrapper ul li:last-child {
@@ -208,25 +206,24 @@ a.donate-us {
 }
 
 /* Ensure .nav-wrapper menu appears above the overlay */
-.nav-wrapper ul.open {
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 2;
-    background: $darkblue;
-    width: 100%;
-    padding: 1rem;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
+    .nav-wrapper ul.open {
+        position: absolute;
+        top: 160px;
+        left: 0;
+        z-index: 2;
+        background: $darkblue;
+        width: 100%;
+        padding: 1rem;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
 }
 
 @media (max-width: 480px) {
-    .nav-content{
-        padding: 0;
-    }
+.nav-content{
+    padding: 0;
+}
 .logo {
-width: 13rem;
+    width: 13rem;
 }
 .nav-wrapper .menu {
     display: flex;
@@ -248,6 +245,7 @@ width: 13rem;
 
 .nav-wrapper ul.open {
     display: flex;
+    top: 160px;
 }
 
 .nav-wrapper ul li {
@@ -263,6 +261,5 @@ a.donate-us {
     margin: 0 auto; 
     width: 30%; 
 }
-
 
 }

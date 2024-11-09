@@ -81,6 +81,9 @@
     }
 }
 @media (max-width: 768px) {
+    .hero-section{
+        height: calc(100vh - 4rem);
+    }
     .banner-ayat{
         padding: 2rem 0;
     }
@@ -101,8 +104,10 @@
         max-width: 500px;
     }  
 }
-
 @media (max-width: 480px) {
+    .hero-section{
+        height: calc(100vh - 6rem);
+    }
     .banner-ayat{
         padding: 0rem;
     }
@@ -125,7 +130,9 @@
     }  
 }
 @media (max-width: 420px) {
-    
+    .hero-section{
+        height: calc(100vh - 8rem);
+    }
     .banner-ayat p {
         font-size: 29px;
         font-weight: 400;
@@ -138,10 +145,9 @@
         padding: 0 1rem;
     }
     .banner-img{
-        max-width: 300px;
+        max-width: 340px;
     }  
 }
-
 @keyframes showCircle {
     0% {
         transform: translate(50%, 50%) scale(0); /* Off-screen */
