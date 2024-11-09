@@ -208,7 +208,7 @@ a.donate-us {
 /* Ensure .nav-wrapper menu appears above the overlay */
     .nav-wrapper ul.open {
         position: absolute;
-        top: 160px;
+        top: 71px;
         left: 0;
         z-index: 2;
         background: $darkblue;
@@ -245,7 +245,7 @@ a.donate-us {
 
 .nav-wrapper ul.open {
     display: flex;
-    top: 160px;
+    top: 71px;
 }
 
 .nav-wrapper ul li {
