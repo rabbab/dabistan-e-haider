@@ -1,4 +1,3 @@
-// src/assets/data.ts
 import course1Thumbnail from '../assets/images/course1.png';
 import course2Thumbnail from '../assets/images/course2.png';
 import course3Thumbnail from '../assets/images/course3.png';

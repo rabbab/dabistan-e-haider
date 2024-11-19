@@ -1,7 +1,6 @@
-// src/components/CourseSection.tsx
 import React from 'react';
 import { Course } from '../../types/Course';
-import { courses } from '../../assets/data';  // Adjust the path as necessary
+import { courses } from '../../assets/data';  
 import './CourseSection.scss';
 import { AiOutlineClockCircle } from 'react-icons/ai';
 import { CiVideoOn } from "react-icons/ci";

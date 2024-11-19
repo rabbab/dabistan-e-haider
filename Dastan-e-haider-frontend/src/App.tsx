@@ -20,7 +20,6 @@ const App = () => {
       <Navbar />
       <HeroSection />
       <CourseSection />
-      {/* <Hero /> */}
       {/* <HomeBanner /> */}
       <Suspense fallback={<Loader />}>
         <Routes>
