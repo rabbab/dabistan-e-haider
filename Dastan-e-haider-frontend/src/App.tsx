@@ -17,7 +17,6 @@ const App = () => {
     <Router>
       <Navbar />
       <HeroSection />
-
       <CourseSection />
       <Suspense fallback={<Loader />}>
         <Routes>
