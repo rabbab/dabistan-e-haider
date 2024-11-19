@@ -1,0 +1,295 @@
+.course-section {
+    background-image: url('../../assets/images/course-vector.png');
+    background-size: 50% 100%;
+    background-position: center;
+    padding: 2rem;
+    width: 100%; 
+    margin: 0 auto;
+    border: 1px solid;
+    border-image-source: linear-gradient(180deg, rgba(111, 134, 148, 0.15) 0%, rgba(126, 149, 164, 0.15) 100%);
+    border: 1px solid;
+    // border-image-slice: 1;
+    height: calc(100vh - 6rem);
+    position: relative;
+}
+
+.course-section-title {
+    font-size: 70px;
+    text-align: center;
+    color: rgba(42, 88, 161, 1);
+    padding-top: 2rem;
+    font-weight: 700;
+    line-height: 66px;
+    align-items: center;
+}
+
+.course-section-description {
+    color: rgba(111, 134, 148, 1);
+    font-size: 24px;
+    text-align: center;
+    font-weight: 400;
+    padding-top: 1rem;
+}
+
+.course-section-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(550px, 1fr));
+    gap: 2rem;
+    padding: 7rem 12rem;
+}
+
+.course-card {
+    width: 600px; 
+    height: 524.15px;
+    padding: 1rem; 
+    background: #fff;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.course-card:hover {
+    transform: translateY(-5px);
+}
+
+.course-card-thumbnail {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    padding: 0.2rem;
+    border-radius: 35px;
+}
+
+.course-card-content {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column; /* Stacks children vertically */
+    justify-content: space-between; /* Distributes space between items */
+    align-items: stretch; /* Centers items horizontally */
+    height: 100%; /* Ensures full height for proper alignment */
+}
+
+.course-card-title {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+    color: #000000;
+    font-weight: bold;
+    text-align: start; /* Aligns text to the start of the container */
+}
+
+.course-card-description {
+    font-size: 0.9rem;
+    color: #ACACAC;
+    margin-bottom: 0.5rem;
+    text-align: start; /* Aligns text to the start of the container */
+}
+
+.course-card-info {
+    border-top: 2px dotted rgba(42, 88, 161, 1);
+    display: flex;
+    justify-content: flex-start;
+    font-size: 0.85rem;
+    color: #777;
+    width: 100%;
+    margin-top: 0.5rem;
+    gap: 2rem;
+}
+
+.course-card-info-item {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-top: 0.5rem;
+}
+
+.course-card-button {
+    justify-content: center;
+    background-color: #2958a1;
+    color: white;
+    font-size: 1.2rem;
+    padding: 0.7rem 1.5rem;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: flex;
+    align-items: center;
+    margin-top: 2rem;
+    align-self: center; /* Centers the button horizontally */
+}
+
+.course-card-button:hover {
+    background-color: #1c3e7a;
+}
+
+.see-more-button {
+    position: absolute;
+    left: 45%;
+    width: 180px;
+    height: 60px;
+    background: #05204B;
+    color: #fff;
+    font-size: 1.5rem;
+    border-radius: 13px;
+    cursor: pointer;
+    opacity: 1; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.see-more-button:hover {
+    background: #000; 
+}
+
+.see-more-arrow {
+    display: inline-block;
+    font-size: 1.5rem;
+    color: #fff;
+    transition: transform 0.3s ease;
+}
+
+.see-more-button:hover .see-more-arrow {
+    transform: translateX(5px); /* Smooth animation for the arrow on hover */
+}
+@media (max-width: 1440px) {
+    .course-section-title {
+        font-size: 50px;
+    }
+
+    .course-section-description {
+        font-size: 16px;
+        line-height: 22px;
+    }
+
+    .course-section-grid {
+        padding: 1rem 2rem;
+        grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    }
+
+    .course-card {
+        width: 400px;
+        height: auto;
+    }
+    .see-more-button {
+    width: 120px;
+    font-size: 1rem;
+    height: 40px;
+    margin-top: 1rem;
+    }
+    
+}
+
+@media (max-width: 1024px) {
+    .course-section-title {
+        font-size: 50px;
+        line-height: 58px;
+    }
+
+    .course-section-description {
+        font-size: 16px;
+        line-height: 26px;
+    }
+
+    .course-section-grid {
+        padding: 1rem 2rem;
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+
+    .course-card {
+        width: 300px;
+    }
+}
+
+@media (max-width: 768px) {
+    .course-section {
+        background-size: 100%;
+        height: 250vh;
+    }
+    .course-section-title {
+        font-size: 42px;
+        line-height: 50px;
+    }
+
+    .course-section-description {
+        font-size: 14px;
+        line-height: 24px;
+    }
+
+    .course-section-grid {
+        padding: 3rem 4rem;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    }
+
+    .course-card {
+        width: 100%;
+        height: auto;
+    }
+
+    .see-more-button {
+        left: 40%;
+        width: 160px;
+        height: 50px;
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .course-section {
+        background-size: 100%;
+        height: 200vh;
+    }
+    .course-section {
+        padding: 1rem;
+    }
+
+    .course-section-title {
+        font-size: 36px;
+        line-height: 44px;
+    }
+
+    .course-section-description {
+        font-size: 12px;
+        line-height: 20px;
+    }
+
+    .course-section-grid {
+        padding: 2rem;
+        grid-template-columns: 1fr;
+    }
+
+    .see-more-button {
+        left: 35%;
+        width: 140px;
+        height: 45px;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 420px) {
+    .course-section-title {
+        font-size: 30px;
+        line-height: 38px;
+    }
+
+    .course-section-description {
+        font-size: 10px;
+        line-height: 18px;
+    }
+
+    .see-more-button {
+        left: 30%;
+        width: 120px;
+        height: 40px;
+        font-size: 0.9rem;
+    }
+
+    .course-card {
+        padding: 0.5rem;
+    }
+}
