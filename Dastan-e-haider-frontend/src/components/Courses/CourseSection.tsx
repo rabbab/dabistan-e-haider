@@ -30,7 +30,7 @@ const CourseSection: React.FC = () => {
                     </div>
                 ))}
             </div>
-            <div data-aos="fade-up" className="see-more-button">
+            <div className="see-more-button">
                 See More <span className="see-more-arrow">&gt;</span>
             </div>
         </section>

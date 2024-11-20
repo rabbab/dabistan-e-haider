@@ -7,10 +7,10 @@
     margin: 0 auto;
     border: 1px solid;
     border-image-source: linear-gradient(180deg, rgba(111, 134, 148, 0.15) 0%, rgba(126, 149, 164, 0.15) 100%);
-    border: 1px solid;
-    // border-image-slice: 1;
-    height: calc(100vh - 6rem);
+    border-image-slice: 1;
+    // height: auto;
     position: relative;
+    height: calc(100vh - 8rem);
 }
 
 .course-section-title {
@@ -33,9 +33,9 @@
 
 .course-section-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(550px, 1fr));
-    gap: 2rem;
-    padding: 7rem 12rem;
+    grid-template-columns: repeat(auto-fill, minmax(460px, 1fr));
+    gap: 9rem;
+    padding: 2rem 7rem;
 }
 
 .course-card {
@@ -59,7 +59,6 @@
     width: 100%;
     height: auto;
     object-fit: cover;
-    padding: 0.2rem;
     border-radius: 35px;
 }
 
@@ -141,6 +140,7 @@
     justify-content: center;
     gap: 10px;
     transition: background-color 0.3s ease;
+    margin-top: 3rem;
 }
 
 .see-more-button:hover {
@@ -158,6 +158,10 @@
     transform: translateX(5px); /* Smooth animation for the arrow on hover */
 }
 @media (max-width: 1440px) {
+    .course-section {
+        background-size: 100%;
+        height: auto;
+    }
     .course-section-title {
         font-size: 50px;
     }
@@ -169,7 +173,7 @@
 
     .course-section-grid {
         padding: 1rem 2rem;
-        grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     }
 
     .course-card {
@@ -186,6 +190,10 @@
 }
 
 @media (max-width: 1024px) {
+    .course-section {
+        background-size: 100%;
+        height: auto;
+    }
     .course-section-title {
         font-size: 50px;
         line-height: 58px;
@@ -209,7 +217,7 @@
 @media (max-width: 768px) {
     .course-section {
         background-size: 100%;
-        height: 250vh;
+        height: auto;
     }
     .course-section-title {
         font-size: 42px;
@@ -222,8 +230,9 @@
     }
 
     .course-section-grid {
-        padding: 3rem 4rem;
-        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        // padding: 1rem 4rem;
+        grid-template-columns: 1fr;
+        padding-bottom: 3.2rem;
     }
 
     .course-card {
@@ -234,15 +243,16 @@
     .see-more-button {
         left: 40%;
         width: 160px;
-        height: 50px;
-        font-size: 1.2rem;
+        // height: 50px;
+        // font-size: 1.2rem;
+        margin-top: -2rem;
     }
 }
 
 @media (max-width: 480px) {
     .course-section {
         background-size: 100%;
-        height: 200vh;
+        height: auto;
     }
     .course-section {
         padding: 1rem;
@@ -259,8 +269,9 @@
     }
 
     .course-section-grid {
-        padding: 2rem;
+        padding: 1rem;
         grid-template-columns: 1fr;
+        padding-bottom: 3rem;
     }
 
     .see-more-button {
@@ -272,6 +283,10 @@
 }
 
 @media (max-width: 420px) {
+    .course-section {
+        background-size: 100%;
+        height: auto;
+    }
     .course-section-title {
         font-size: 30px;
         line-height: 38px;
@@ -283,7 +298,6 @@
     }
 
     .see-more-button {
-        left: 30%;
         width: 120px;
         height: 40px;
         font-size: 0.9rem;
