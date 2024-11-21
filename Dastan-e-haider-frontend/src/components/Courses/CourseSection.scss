@@ -10,7 +10,7 @@
     border-image-slice: 1;
     // height: auto;
     position: relative;
-    height: calc(100vh - 8rem);
+    height: calc(100vh - 6rem);
 }
 
 .course-section-title {
@@ -28,25 +28,25 @@
     font-size: 24px;
     text-align: center;
     font-weight: 400;
-    padding-top: 1rem;
+    padding-top: 0.5rem;
 }
 
 .course-section-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(460px, 1fr));
-    gap: 9rem;
+    grid-template-columns: repeat(auto-fill, minmax(423px, 1fr));
+    gap: 8rem;
     padding: 2rem 7rem;
 }
 
 .course-card {
-    width: 600px; 
-    height: 524.15px;
-    padding: 1rem; 
+    width: 420px;
+    height: 444.15px;
+    padding: 1rem;
     background: #fff;
     border-radius: 20px;
     overflow: hidden;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
+    box-shadow: 0 4px 8px #0000001a;
+    transition: transform .3s ease;
     display: flex;
     flex-direction: column;
 }
@@ -140,7 +140,7 @@
     justify-content: center;
     gap: 10px;
     transition: background-color 0.3s ease;
-    margin-top: 3rem;
+    margin-top: 1rem;
 }
 
 .see-more-button:hover {
@@ -157,42 +157,46 @@
 .see-more-button:hover .see-more-arrow {
     transform: translateX(5px); /* Smooth animation for the arrow on hover */
 }
-@media (max-width: 1890px) {
+@media (min-width: 1441px) {
     .course-section {
         background-size: 100%;
         height: auto;
     }
+    .course-section {
+        padding: 3rem 5rem;
+    }
+
     .course-section-title {
-        font-size: 50px;
+        font-size: 80px;
+        line-height: 1.2;
     }
 
     .course-section-description {
-        font-size: 16px;
-        line-height: 22px;
+        font-size: 24px;
+        line-height: 28px;
     }
 
     .course-section-grid {
-        padding: 1rem 2rem;
-        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        padding: 2rem 2rem;
+        grid-template-columns: repeat(auto-fill, minmax(350px, 2fr));
+        gap: 6rem;
     }
 
     .course-card {
-        width: 400px;
+        width: 550px;
         height: auto;
     }
+
     .see-more-button {
-    width: 120px;
-    font-size: 1rem;
-    height: 40px;
-    margin-top: 1rem;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 200px;
+        height: 60px;
+        font-size: 1.5rem;
     }
-    
 }
+
 @media (max-width: 1440px) {
-    .course-section {
-        background-size: 100%;
-        height: auto;
-    }
     .course-section-title {
         font-size: 50px;
     }
