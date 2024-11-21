@@ -157,44 +157,6 @@
 .see-more-button:hover .see-more-arrow {
     transform: translateX(5px); /* Smooth animation for the arrow on hover */
 }
-@media (min-width: 1441px) {
-    .course-section {
-        background-size: 100%;
-        height: auto;
-    }
-    .course-section {
-        padding: 3rem 5rem;
-    }
-
-    .course-section-title {
-        font-size: 80px;
-        line-height: 1.2;
-    }
-
-    .course-section-description {
-        font-size: 24px;
-        line-height: 28px;
-    }
-
-    .course-section-grid {
-        padding: 2rem 2rem;
-        grid-template-columns: repeat(auto-fill, minmax(350px, 2fr));
-        gap: 6rem;
-    }
-
-    .course-card {
-        width: 550px;
-        height: auto;
-    }
-
-    .see-more-button {
-        left: 50%;
-        transform: translateX(-50%);
-        width: 200px;
-        height: 60px;
-        font-size: 1.5rem;
-    }
-}
 
 @media (max-width: 1440px) {
     .course-section-title {
