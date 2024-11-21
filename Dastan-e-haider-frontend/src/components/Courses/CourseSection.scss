@@ -2,7 +2,7 @@
     background-image: url('../../assets/images/course-vector-bg.png');
     background-size: 50% 100%;
     background-position: center;
-    padding: 2rem;
+    padding: 2rem 0;
     width: 100%; 
     margin: 0 auto;
     border: 1px solid;
@@ -33,8 +33,8 @@
 
 .course-section-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(423px, 1fr));
-    gap: 8rem;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 6rem;
     padding: 2rem 7rem;
 }
 
@@ -80,7 +80,7 @@
 }
 
 .course-card-description {
-    font-size: 0.9rem;
+    font-size: 1rem;
     color: #ACACAC;
     margin-bottom: 0.5rem;
     text-align: start; /* Aligns text to the start of the container */
@@ -109,15 +109,15 @@
     background-color: #2958a1;
     color: white;
     font-size: 1.2rem;
-    padding: 0.7rem 1.5rem;
+    padding: 0.6rem 1.5rem;
     border: none;
     border-radius: 20px;
     cursor: pointer;
     transition: background-color 0.3s ease;
     display: flex;
     align-items: center;
-    margin-top: 2rem;
-    align-self: center; 
+    margin-top: 1rem;
+    align-self: center;
 }
 
 .course-card-button:hover {
@@ -126,7 +126,7 @@
 
 .see-more-button {
     position: absolute;
-    left: 45%;
+    left: 43%;
     width: 180px;
     height: 60px;
     background: #05204B;
@@ -215,26 +215,37 @@
     .course-section {
         background-size: 100%;
         height: auto;
+        display: flex; /* Use flexbox for centering */
+        flex-direction: column; /* Stack children vertically */
+        justify-content: center; /* Center content vertically */
+        align-items: center; /* Center content horizontally */
+        padding: 2rem; /* Add padding for spacing */
     }
     .course-section-title {
         font-size: 42px;
         line-height: 50px;
+        text-align: center;
     }
 
     .course-section-description {
         font-size: 14px;
         line-height: 24px;
+        text-align: center;
     }
 
     .course-section-grid {
-        // padding: 1rem 4rem;
-        grid-template-columns: 1fr;
-        padding-bottom: 3.2rem;
+        display: flex; /* Switch to flexbox */
+        flex-direction: column; /* Stack cards vertically */
+        gap: 1.5rem; /* Add space between cards */
+        width: 100%; /* Full width */
+        padding: 1rem 1rem;
     }
 
     .course-card {
-        width: 100%;
-        height: auto;
+        width: 100%; /* Adjust width for smaller screens */
+        max-width: 450px; /* Ensure cards don’t get too wide */
+        height: auto; /* Allow height to adjust based on content */
+        margin: 0 auto; /* Center cards horizontally */
     }
 
     .see-more-button {
@@ -243,6 +254,7 @@
         // height: 50px;
         // font-size: 1.2rem;
         margin-top: -2rem;
+        bottom: 0;
     }
 }
 
