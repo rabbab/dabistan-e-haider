@@ -125,8 +125,8 @@
 }
 
 .see-more-button {
-    position: absolute;
-    left: 43%;
+    position: relative; /* Avoid absolute positioning */
+    margin: 1rem auto; /* Center the button horizontally */
     width: 180px;
     height: 60px;
     background: #05204B;
@@ -140,7 +140,7 @@
     justify-content: center;
     gap: 10px;
     transition: background-color 0.3s ease;
-    margin-top: 1rem;
+    text-align: center; /* Ensures text alignment */
 }
 
 .see-more-button:hover {
@@ -159,6 +159,9 @@
 }
 
 @media (max-width: 1440px) {
+    .course-section {
+        height: auto;
+    }
     .course-section-title {
         font-size: 50px;
     }
@@ -174,7 +177,7 @@
     }
 
     .course-card {
-        width: 400px;
+        width: 380px;
         height: auto;
     }
     .see-more-button {
@@ -248,14 +251,6 @@
         margin: 0 auto; /* Center cards horizontally */
     }
 
-    .see-more-button {
-        left: 40%;
-        width: 160px;
-        // height: 50px;
-        // font-size: 1.2rem;
-        margin-top: -2rem;
-        bottom: 0;
-    }
 }
 
 @media (max-width: 480px) {
@@ -283,12 +278,7 @@
         padding-bottom: 3rem;
     }
 
-    .see-more-button {
-        left: 35%;
-        width: 140px;
-        height: 45px;
-        font-size: 1rem;
-    }
+    
 }
 
 @media (max-width: 420px) {
