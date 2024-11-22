@@ -6,6 +6,7 @@ import 'aos/dist/aos.css'
 import Navbar from "./components/Navbar/Navbar";
 import HeroSection from "./components/HeroSection/HeroSection";
 import CourseSection from "./components/Courses/CourseSection";
+import Books from "./components/Books/Books";
 
 const App = () => {
   useEffect(()=>{
@@ -21,6 +22,7 @@ const App = () => {
       <Navbar />
       <HeroSection />
       <CourseSection />
+      <Books/>
       <Suspense fallback={<Loader />}>
         <Routes>
         </Routes>

@@ -1,0 +1,49 @@
+.book-section {
+    background-image: url('../../assets/images/bg-book.png');
+    background-size: 50% 100%;
+    background-position: center; 
+    background-color: #05204B; 
+    width: 100%; 
+    padding: 0 1rem;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: calc(100vh - 6rem);
+  }
+  
+  .book-section-header {
+    margin-bottom: 2rem;
+  
+    h2 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      font-weight: bold;
+    }
+  
+    p {
+      font-size: 1.2rem;
+      margin-bottom: 1rem;
+    }
+  }
+  
+  .book-carousel {
+    max-width: 1200px;
+    margin: 0 auto;
+  
+    .slick-slide img {
+      border-radius: 10px;
+      transition: transform 0.3s ease;
+      width: 100%;
+      height: auto;
+    }
+  
+    .slick-slide img:hover {
+      transform: scale(1.05);
+    }
+  
+    .slick-dots li button:before {
+      color: #fff;
+    }
+  }
+  
