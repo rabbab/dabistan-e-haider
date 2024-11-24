@@ -43,13 +43,15 @@ const Books = () => {
   return (
     <div className="book-section">
       <div className="book-section-header">
-        <h2>Explore Our Books</h2>
-        <p>Discover our collection of curated books</p>
+        <h2 data-aos="fade-down">Explore Our Books</h2>
+        <p data-aos="fade-down">Discover our collection of curated books</p>
       </div>
-      <div className="book-carousel">
+      <div   className="book-carousel">
         <Slider {...settings}>
           {books.map((book) => (
-            <div key={book.id} className="book-card">
+            <div data-aos="flip-left"
+            data-aos-easing="ease-out-cubic"
+            data-aos-duration="2000" key={book.id} className="book-card">
               <div className="book-image-wrapper">
                 <div className="book-image-inner">
                   <img
