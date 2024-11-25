@@ -16,18 +16,16 @@
   margin-bottom: 2rem;
 
   h2 {
-    // font-size: 2rem;
     margin-bottom: 0.5rem;
+    margin-top: 1rem;
     color: #fff;
-    font-size: 50px;
-    padding-top: 2rem;
+    font-size: 40px;
     font-weight: 600;
-    line-height: 30px;
+    line-height: 20px;
     align-items: center;
   }
 
   p {
-    // font-size: 1.4rem;
     color: #fff;
     font-size: 22px;
     text-align: center;
@@ -66,8 +64,8 @@
     font-size: 30px;
 }
 .slick-dots li button:before {
-  font-size: 18px;
-  line-height: 4rem;
+  font-size: 14px;
+  line-height: 3rem;
   color: #fff;
 }
 .slick-slide {
@@ -79,8 +77,8 @@
 
     .book-image-wrapper {
       position: relative;
-      width: 350px; /* Adjust as needed */
-      height: 520px; /* Adjust as needed */
+      width: 310px; /* Adjust as needed */
+      height: 460px; /* Adjust as needed */
       perspective: 1000px; /* Enables 3D effect */
       cursor: pointer;
       padding: auto;

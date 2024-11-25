@@ -14,12 +14,11 @@
 }
 
 .course-section-title {
-    font-size: 70px;
+    font-size: 55px;
     text-align: center;
     color: rgba(42, 88, 161, 1);
-    padding-top: 2rem;
-    font-weight: 700;
-    line-height: 66px;
+    font-weight: 600;
+    line-height: 46px;
     align-items: center;
 }
 
@@ -28,7 +27,6 @@
     font-size: 24px;
     text-align: center;
     font-weight: 400;
-    padding-top: 0.5rem;
 }
 
 .course-section-grid {
@@ -126,7 +124,7 @@
 
 .see-more-button {
     position: relative; /* Avoid absolute positioning */
-    margin: 1rem auto; /* Center the button horizontally */
+    margin: -1.5rem auto; /* Center the button horizontally */
     width: 180px;
     height: 60px;
     background: #05204B;
