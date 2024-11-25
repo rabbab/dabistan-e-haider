@@ -32,7 +32,7 @@ const Navbar = () => {
                     <li>
                         <NavLink to="/donate-us" className="donate-us">
                             <div className="expandable-div"></div>
-                            <span>Donate Us</span>
+                            <span>Support Us</span>
                         </NavLink>
                     </li>
                 </ul>
