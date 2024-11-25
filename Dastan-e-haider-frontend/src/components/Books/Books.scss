@@ -157,9 +157,12 @@
         right: 1.7rem; 
       }
       .slick-dots li button:before {
-        line-height: 1.5rem;
+        line-height: 1rem;
       }
-      .book-image-wrapper {
+      .slick-dots li button:before {
+        font-size: 13px;
+    }
+    .book-card .book-image-wrapper {
         width: 280px;
         height: 420px;
       }
@@ -172,7 +175,7 @@
     height: auto;
   }
 
-  .book-carousel .book-image-wrapper {
+  .book-carousel .book-card .book-image-wrapper {
     width: 250px;
     height: 375px;
   }
@@ -202,10 +205,11 @@
     font-size: 1.2rem;
   }
 
-  .book-carousel .book-image-wrapper {
-    width: 220px;
-    height: 330px;
+  .book-carousel .book-card .book-image-wrapper {
+    width: 300px;
+    height: 440px;
   }
+  
 }
 
 @media (max-width: 480px) {
